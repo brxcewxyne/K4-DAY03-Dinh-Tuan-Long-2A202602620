@@ -128,3 +128,20 @@ Học viên làm bài lần lượt theo đúng luồng 3 bước tinh giản d�
 | **2. ReAct Loop & MCP Integration** | **35%** | Vòng lặp ReAct chạy mượt mà qua Native Tool Calling & MCP Server **trên LLM API thật (Gemini/OpenAI)**. | Code trong `src/mcp_server.py` + `src/tools.py` + `src/app.py` + Log API thật. |
 | **3. Waterfall Trace & Observation** | **25%** | File log `trace_waterfall.json` trích xuất đầy đủ chuỗi suy luận Thought $\rightarrow$ Action $\rightarrow$ Observation. | File log `docs/trace_waterfall.json` + `docs/trace_eval.md`. |
 | **4. Git Repository & Submission** | **15%** | Cấu trúc Repo sạch sẽ, commit chuẩn chỉ và nộp đúng hạn trên LMS VLearn. | Link Repo GitHub cá nhân. |
+
+---
+
+## 🖥️ GIAO DIỆN WEB TÙY CHỌN
+
+Dự án có thêm giao diện Streamlit tối giản với theme đỏ–trắng. Giao diện giữ
+nguyên ReAct Loop, MCP Server và cơ chế định tuyến model của ứng dụng CLI.
+
+```powershell
+pip install -r requirements.txt
+streamlit run src/ui.py
+```
+
+Luồng sử dụng: nhập yêu cầu → Agent tự chọn model và Tool → xem kết quả; Waterfall
+Trace của từng yêu cầu nằm trong phần mở rộng và có thể tải xuống dưới dạng JSON.
+UI chỉ hiển thị trace của request tương ứng; toàn bộ sự kiện được nối thêm vào
+file `docs/trace_waterfall.json`.

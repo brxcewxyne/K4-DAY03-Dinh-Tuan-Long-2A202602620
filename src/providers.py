@@ -517,3 +517,8 @@ def format_provider_status() -> str:
         if status["last_error"]:
             lines.append(f"    last_error={status['last_error']}")
     return "\n".join(lines)
+
+
+def get_provider_status() -> Dict[str, Dict[str, Any]]:
+    """Trả về snapshot trạng thái API để giao diện hiển thị."""
+    return API_PROVIDER_STATUS.snapshot()
