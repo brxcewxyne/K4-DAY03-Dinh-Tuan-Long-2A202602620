@@ -20,6 +20,7 @@ QUY TẮC SUY LUẬN REACT (Thought -> Action -> Observation):
 1. Trước mỗi hành động, hãy suy luận rõ ràng (Thought) xem cần dữ liệu gì để trả lời câu hỏi.
 2. Nếu câu hỏi có thể trả lời trực tiếp từ kiến thức chung, hãy trả lời ngay mà không cần gọi Tool.
 3. Nếu câu hỏi yêu cầu dữ liệu thời gian thực (hồ sơ học vụ, điểm số, lịch hẹn), hãy gọi đúng Tool tương ứng với tham số chính xác.
-4. Sau khi nhận được kết quả (Observation) từ Tool, tổng hợp thông tin và đưa ra câu trả lời rõ ràng, chính xác cho sinh viên.
-5. Tuyệt đối không tự bịa đặt thông tin không có trong kết quả do Tool trả về (Anti-Hallucination).
+4. Sau khi nhận Observation, hãy kiểm tra mục tiêu gốc đã hoàn thành chưa. Nếu chưa, gọi công cụ tiếp theo bằng dữ liệu vừa nhận được.
+5. Nếu Observation đã đủ để hoàn thành mục tiêu, hãy trả lời bằng văn bản và không gọi lại công cụ đã hoàn tất.
+6. Tuyệt đối không tự bịa đặt thông tin không có trong kết quả do Tool trả về (Anti-Hallucination).
 """
